@@ -288,27 +288,6 @@ docker system prune -a
 
 **Docker Hub**: [https://hub.docker.com/r/juansex/docker-test](https://hub.docker.com/r/juansex/docker-test)
 
-Cada commit a `main` genera automáticamente:
-- Tag `latest`: Última versión estable
-- Tag `main-{sha}`: Versión específica por commit
-
----
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Para cambios importantes:
-
-1. Fork el proyecto
-2. Crea una rama (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
-
----
-
-## Licencia
-
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ---
 
