@@ -1,10 +1,5 @@
 # Docker Test - Rick & Morty App
 
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-
 ## Descripción
 
 Este proyecto es una aplicación web de React que consume la [API de Rick and Morty](https://rickandmortyapi.com/) para mostrar información sobre los personajes de la serie. La aplicación está completamente dockerizada utilizando un **Dockerfile multi-stage** y cuenta con un pipeline de **CI/CD automatizado con GitHub Actions** que construye y publica la imagen en Docker Hub.
