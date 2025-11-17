@@ -167,49 +167,6 @@ on:
    ```
    Construye y publica con cache de GitHub Actions para builds más rápidos
 
-### Configuración de Secrets
-
-Los **secrets** en GitHub son variables de entorno encriptadas que almacenan información sensible (credenciales, tokens, contraseñas) de forma segura. Son necesarios para que el pipeline pueda autenticarse en Docker Hub y publicar las imágenes.
-
-#### Paso 1: Crear token de acceso en Docker Hub
-
-1. Ve a [hub.docker.com](https://hub.docker.com) e inicia sesión
-2. Haz clic en tu nombre de usuario → **Account Settings**
-3. En el menú lateral, selecciona **Security**
-4. Haz clic en **New Access Token**
-5. Nombre del token: `github-actions`
-6. Permisos: **Read, Write, Delete**
-7. Haz clic en **Generate**
-8. **IMPORTANTE**: Copia el token inmediatamente (no podrás verlo de nuevo)
-
-#### Paso 2: Agregar secrets en GitHub
-
-1. Ve a tu repositorio en GitHub
-2. Haz clic en **Settings** (pestaña superior)
-3. En el menú lateral: **Secrets and variables** → **Actions**
-4. Haz clic en **New repository secret**
-
-Crea estos dos secrets:
-
-**DOCKERHUB_USERNAME**
-- Name: `DOCKERHUB_USERNAME`
-- Secret: Tu nombre de usuario de Docker Hub
-- Clic en **Add secret**
-
-**DOCKERHUB_TOKEN**
-- Name: `DOCKERHUB_TOKEN`
-- Secret: Pega el token que copiaste de Docker Hub
-- Clic en **Add secret**
-
-#### Verificar configuración
-
-Una vez configurados los secrets:
-- El próximo push a `main` ejecutará el workflow automáticamente
-- Verifica en la pestaña **Actions** del repositorio que se ejecute correctamente
-- La imagen aparecerá publicada en tu perfil de Docker Hub
-
-**Nota de seguridad**: Los secrets están encriptados y GitHub los oculta automáticamente en los logs de las actions.
-
 ---
 
 ## Cómo Usar
