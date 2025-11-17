@@ -1,25 +1,25 @@
-# 🚀 Docker Test - Rick & Morty App
+# Docker Test - Rick & Morty App
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-## 📝 Descripción
+## Descripción
 
 Este proyecto es una aplicación web de React que consume la [API de Rick and Morty](https://rickandmortyapi.com/) para mostrar información sobre los personajes de la serie. La aplicación está completamente dockerizada utilizando un **Dockerfile multi-stage** y cuenta con un pipeline de **CI/CD automatizado con GitHub Actions** que construye y publica la imagen en Docker Hub.
 
-### ✨ Características principales:
+### Características principales:
 
-- 🐳 **Dockerfile multi-stage**: Optimiza el tamaño de la imagen final
-- 🔄 **CI/CD automatizado**: GitHub Actions construye y publica automáticamente
-- 🌐 **NGINX como servidor web**: Configuración optimizada para aplicaciones React
-- 📦 **Imagen ligera**: Utiliza Alpine Linux para reducir el tamaño
-- 🚀 **Listo para producción**: Configuración lista para desplegar
+- **Dockerfile multi-stage**: Optimiza el tamaño de la imagen final
+- **CI/CD automatizado**: GitHub Actions construye y publica automáticamente
+- **NGINX como servidor web**: Configuración optimizada para aplicaciones React
+- **Imagen ligera**: Utiliza Alpine Linux para reducir el tamaño
+- **Listo para producción**: Configuración lista para desplegar
 
 ---
 
-## 🏗️ Arquitectura de la Aplicación
+## Arquitectura de la Aplicación
 
 ### Aplicación React
 La aplicación permite:
@@ -52,7 +52,7 @@ docker-test/
 
 ---
 
-## 🐳 Implementación Docker
+## Implementación Docker
 
 ### Dockerfile Multi-Stage
 
@@ -85,10 +85,11 @@ CMD ["nginx", "-g", "daemon off;"]
 - Expone el puerto 80
 
 ### Ventajas del Multi-Stage Build:
-✅ **Imagen final más pequeña**: Solo contiene NGINX y archivos estáticos (sin Node.js ni dependencias de desarrollo)  
-✅ **Más seguro**: Menos superficie de ataque al eliminar herramientas de desarrollo  
-✅ **Más rápido**: Las imágenes más pequeñas se descargan y despliegan más rápido  
-✅ **Mejor organización**: Separa claramente build de producción
+
+- **Imagen final más pequeña**: Solo contiene NGINX y archivos estáticos (sin Node.js ni dependencias de desarrollo)  
+- **Más seguro**: Menos superficie de ataque al eliminar herramientas de desarrollo  
+- **Más rápido**: Las imágenes más pequeñas se descargan y despliegan más rápido  
+- **Mejor organización**: Separa claramente build de producción
 
 ### .dockerignore
 
@@ -122,7 +123,7 @@ La directiva `try_files` asegura que todas las rutas sean manejadas por React Ro
 
 ---
 
-## 🔄 CI/CD con GitHub Actions
+## CI/CD con GitHub Actions
 
 ### Pipeline Automatizado
 
@@ -187,7 +188,7 @@ Para crear el token:
 
 ---
 
-## 🚀 Cómo Usar
+## Cómo Usar
 
 ### Opción 1: Usar la imagen publicada en Docker Hub
 
@@ -233,7 +234,7 @@ npm run dev
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 | Tecnología | Versión | Propósito |
 |-----------|---------|-----------|
@@ -246,7 +247,7 @@ npm run dev
 
 ---
 
-## 📊 Comparación de Tamaños de Imagen
+## Comparación de Tamaños de Imagen
 
 | Tipo de Build | Tamaño |
 |--------------|--------|
@@ -256,7 +257,7 @@ npm run dev
 
 ---
 
-## 🔧 Comandos Útiles
+## Comandos Útiles
 
 ```bash
 # Ver imágenes locales
@@ -283,7 +284,7 @@ docker system prune -a
 
 ---
 
-## 📦 Imagen Publicada
+## Imagen Publicada
 
 **Docker Hub**: [https://hub.docker.com/r/juansex/docker-test](https://hub.docker.com/r/juansex/docker-test)
 
@@ -293,7 +294,7 @@ Cada commit a `main` genera automáticamente:
 
 ---
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las contribuciones son bienvenidas. Para cambios importantes:
 
@@ -305,29 +306,20 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es de código abierto y está disponible bajo la licencia MIT.
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Juan Sebastian**
 - GitHub: [@Juansex](https://github.com/Juansex)
-- Proyecto basado en: [@AlexisJ16/docker-test](https://github.com/AlexisJ16/docker-test)
 
 ---
 
-## 🙏 Agradecimientos
-
-- [Rick and Morty API](https://rickandmortyapi.com/) por proporcionar la API gratuita
-- Comunidad de Docker por la excelente documentación
-- GitHub Actions por el servicio de CI/CD gratuito
-
----
-
-## 📚 Recursos Adicionales
+## Recursos Adicionales
 
 - [Documentación oficial de Docker](https://docs.docker.com/)
 - [Guía de Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
